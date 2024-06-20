@@ -7,7 +7,7 @@ import WrapperBox from "../components/WrapperBox";
 
 const RootComponent = (props) => {
   // eslint-disable-next-line
-  const [products, setProducts] = useState([
+  const [products] = useState([
     { id: "p1", title: "Product 1", price: 1999 },
     { id: "p2", title: "Product 2", price: 999 },
   ]);
