@@ -177,10 +177,18 @@ const ProductOne = (props) => {
         </Grid>
         <Grid item xs={8}>
           <div style={{ display: "flex", justifyContent: "space-between" }}>
-            <Button variant="success" sx={{ width: "5rem" }}>
+            <Button
+              variant="success"
+              sx={{ width: "5rem" }}
+              onClick={() => props.addProduct(props.product)}
+            >
               Add
             </Button>
-            <Button variant="error" sx={{ width: "5rem" }}>
+            <Button
+              variant="error"
+              sx={{ width: "5rem" }}
+              onClick={() => props.removeProduct(props.product)}
+            >
               Remove
             </Button>
           </div>
@@ -213,10 +221,20 @@ const ProductTwo = (props) => {
         </Grid>
         <Grid item xs={8}>
           <div style={{ display: "flex", justifyContent: "space-between" }}>
-            <Button variant="success" size="sm" style={{ width: "5rem" }}>
+            <Button
+              variant="success"
+              size="sm"
+              style={{ width: "5rem" }}
+              onClick={() => props.addProduct(props.product)}
+            >
               Add
             </Button>
-            <Button variant="error" size="sm" style={{ width: "5rem" }}>
+            <Button
+              variant="error"
+              size="sm"
+              style={{ width: "5rem" }}
+              onClick={() => props.removeProduct(props.product)}
+            >
               Remove
             </Button>
           </div>
