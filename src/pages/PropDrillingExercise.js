@@ -85,7 +85,7 @@ const RootComponent = (props) => {
         <Grid item md={6}>
           <ProductPage
             products={products}
-            addProductToCart={addProductToCart}
+            addProduct={addProductToCart}
             removedProduct={removeProductFromCart}
           />
         </Grid>
@@ -113,10 +113,18 @@ const ProductPage = (props) => {
       </Typography>
       <Grid container spacing={2} p="1rem">
         <Grid item sm={6}>
-          <ProductOne product={props.products[0]} />
+          <ProductOne
+            product={props.products[0]}
+            addProduct={props.addProduct}
+            removeProduct={props.removeProduct}
+          />
         </Grid>
         <Grid item sm={6}>
-          <ProductTwo product={props.products[1]} />
+          <ProductTwo
+            product={props.products[1]}
+            addProduct={props.addProduct}
+            removeProduct={props.removeProduct}
+          />
         </Grid>
       </Grid>
     </WrapperBox>
